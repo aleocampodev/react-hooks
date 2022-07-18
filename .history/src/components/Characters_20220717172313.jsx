@@ -31,11 +31,8 @@ const  Characters = () => {
 
 	return (
 		<div className='Characters'>
-			{favorites.favorites.map(favorite =>(
-				<li key={favorite.id}>{favorite.name}</li>
-			))}
 			{characters.map((character) => (
-				<div key ={character.id}>
+				<div>
 					<h2>{character.name}</h2>
 				<button type="button" onClick={() => handleClick(character)}>Agregar a favoritos</button>
 				</div>
