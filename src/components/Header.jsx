@@ -8,8 +8,8 @@ const Header = (props) => {
 
 	return (
 		<div className="header">
-			<h1 >{props.title}</h1>
-			<button type="button" onClick={handleChangeTheme} className="styleButton">{theme === themes.darkMode? 'Dark mode' :'lightMode'}</button>
+			<h1 className="title">{props.title}</h1>
+			<button type="button" onClick={handleChangeTheme} className="styleButton"><span style={{ color: theme.foreground }}>{theme === themes.darkMode? 'Dark mode' :'lightMode'}</span></button>
 		</div>
 	)
 }

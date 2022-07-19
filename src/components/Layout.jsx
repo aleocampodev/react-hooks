@@ -12,12 +12,12 @@ function Layout({ children }) {
     >
       <header >
         <nav>
-          <Header title="React Hooks"/>
+          <Header title="Characters"/>
         </nav>
       </header>
       {children}
       <footer className="footer">
-        <p>Aprender</p>
+        <p>2022</p>
       </footer>
     </div>
   );
