@@ -1,20 +1,15 @@
-import {useState, useContext} from 'react'
-import ThemeContext from '../context/ThemeContext'
+import { useContext} from 'react'
+import ThemeContext,{themes} from '../context/ThemeContext'
+import '../styles.css'
 
 const Header = (props) => {
-	const [darkMode, setDarkMode] = useState(false)
-	const color = useContext(ThemeContext)
-
-	const changeMode=() => {
-		//setDarkMode(true)
-		setDarkMode(!darkMode)
-	}
+	const { theme, handleChangeTheme } = useContext(ThemeContext);
 
 
 	return (
-		<div className="Header">
-			<h1 style={{color}}>{props.title}</h1>
-			<button type="button" onClick={changeMode}>{darkMode? 'Dark mode' :'lightMode'}</button>
+		<div className="header">
+			<h1 className="title">{props.title}</h1>
+			<button type="button" onClick={handleChangeTheme} className="styleButton"><span style={{ color: theme.foreground }}>{theme === themes.darkMode? 'Dark Mode' :'Light Mode'}</span></button>
 		</div>
 	)
 }
