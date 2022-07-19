@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#Layout{
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+}
+
+.header{
+  flex: 1;
+  background-color: aqua;
+  padding:30px;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.styleButton{
+  margin-left:25px;
+}
+
+.footer{
+  flex:1;
+ 
+}
+
+
+
+
+

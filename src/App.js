@@ -1,14 +1,22 @@
-import Header from "./components/Header";
+import { useState } from "react";
+import Layout from "./components/Layout";
 import Characters from "./components/Characters";
-import "./App.css";
+import ThemeContext, { themes } from "./context/ThemeContext";
+import "./styles.css";
 
 function App() {
+  const [theme, setTheme] = useState(themes.light);
+
+  const handleChangeTheme = () => {
+    setTheme(() => (theme === themes.dark ? themes.light : themes.dark));
+  };
+
   return (
-    <div className="App">
-      <Header title="React Hooks" />
-      <Characters />
-      <h1>Hola mundo</h1>
-    </div>
+    <ThemeContext.Provider value={{ theme, handleChangeTheme }}>
+      <Layout>
+        <Characters />
+      </Layout>
+    </ThemeContext.Provider>
   );
 }
 
