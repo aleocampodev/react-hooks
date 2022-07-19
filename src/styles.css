@@ -24,10 +24,10 @@
 
 .styleButton{
   margin-left:55px;
-  margin-top:5px;
+  margin-top:10px;
   --c:#FA8072;
   color: var(--c);
-  font-size: 10px;
+  font-size: 12px;
   border: 0.3em solid var(--c);
   border-radius: 0.5em;
   width: 12em;

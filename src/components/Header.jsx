@@ -9,7 +9,7 @@ const Header = (props) => {
 	return (
 		<div className="header">
 			<h1 className="title">{props.title}</h1>
-			<button type="button" onClick={handleChangeTheme} className="styleButton"><span style={{ color: theme.foreground }}>{theme === themes.darkMode? 'Dark mode' :'lightMode'}</span></button>
+			<button type="button" onClick={handleChangeTheme} className="styleButton"><span style={{ color: theme.foreground }}>{theme === themes.darkMode? 'Dark Mode' :'Light Mode'}</span></button>
 		</div>
 	)
 }
